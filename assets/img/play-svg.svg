@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+	<title>play-pdf</title>
+	<defs>
+		<image width="90" height="90" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAAXNSR0IB2cksfwAAAK5QTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LYr0KgAAADp0Uk5TAAhvyfT/yG4HHNHQbcfzYBiO/krqFrcB+TXcDqZeKM+RT+wdwQOA/D/jE8oqLs3CUO36YhrxbAYbxqnNxsUAAAFRSURBVHic7dndS8JgFAbw59kst4huokwjIyQI+2D+//+A1mXRFxVEUMSQSAPF0FK8mcE7Y4dDI89zt68fg/Oyc3hHqIVGG230wtGcJBP05ZH9FDrkZyZ3muVRz0kzlMhje5h87xna80UyUPxw0b4npIOui17rQZaw46KXhDKQrJXRRhtt9DQr49bTdVwT0n4f63xXoScPbPBNi0Yp3mwr0UCZsRaNbb5q0cDOS/qUIqBR5bMWDe52Upa4iAb2+KRFo8ZHLRr75IMSDRzwTotGnbdaNI5u1Ojjay26XrhSotXKqLf4aquXjhuldMQLl5zXz1O1PXDD+WwFeg1Mre2W4uh8npyrEUdxMDvhvdY4+fsYbbTRi0yLN+OiMxetuIVYHAnpxqmLDvzUSWBuKlstF43Qk9iVcjN5+GOsCApktlqGh0O2Zs78i38FRhtt9J/R34gRjlvBbMg1AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Bitmap" href="#img1" transform="matrix(2.961,0,0,2.961,-33,-33)"/>
+</svg>
