@@ -31,6 +31,17 @@ async function fetchMovies(URL) {
 
 formNextBtn.addEventListener("click", () => {
 
+  const namesValue = document.getElementById("names").value
+  const showsValue = document.getElementById("shows").value
+  const seatsValue = document.getElementById("seats").value
+
+  const ticket = {
+    name: namesValue,
+    show: showsValue,
+    seat: seatsValue
+  }
+
+  localStorage.setItem("ticket", JSON.stringify(ticket))
   ticketInner.innerHTML = `
     <h2 class="tickets-title">Comprar ticket</h2>
     <h3 class="tickets-subtitle">Completa tu información personal</h3>

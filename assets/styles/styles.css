@@ -91,10 +91,11 @@ header {
 /* CAROUSEL START*/
 .carousel-item {
     position: relative;
-    padding-top: 5rem;
+    padding: 7rem 0;
     display: flex !important;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
 }
@@ -272,10 +273,11 @@ header {
 /* TICKETS START */
 #tickets {
     background-color: #282828;
-    height: 100vh;
+    height: auto;
     padding: 0 5vw;
     background-image: url("../img/pop-bg.png");
     background-repeat: no-repeat;
+    background-size: cover;
     background-position-y: 50%;
 }
 
@@ -303,6 +305,7 @@ header {
 .form {
     width: 30vw;
     min-width: 400px;
+    margin-bottom: 5vh;
 }
 
 .select-div {
@@ -365,7 +368,8 @@ header {
     flex-direction: column;
     color: white;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 12%;
+    min-height: 100vh;
 }
 
 .finished h5 {
@@ -374,7 +378,7 @@ header {
 
 .emoji-ticket {
     font-size: 15rem;
-    margin: -7rem 0 -4rem 0;
+    margin: -5rem 0 -3rem 0;
 }
 
 .form-alert {
@@ -455,7 +459,7 @@ header {
     /* CAROUSEL START*/
     .carousel-item {
         position: relative;
-        padding-top: 5rem;
+        padding-top: 10rem;
         display: flex !important;
         flex-direction: column;
         height: 100vh;
@@ -672,7 +676,10 @@ header {
 
     .form {
         width: 30vw;
-        min-width: 400px;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .select-div {
@@ -680,6 +687,7 @@ header {
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
+        width: 100%;
     }
 
     .select-div select, .select-div input {
@@ -748,7 +756,7 @@ header {
 
     .emoji-ticket {
         font-size: 15rem;
-        margin: -7rem 0 -4rem 0;
+        margin: -6rem 0 -3rem 0;
     }
 
     .form-alert {

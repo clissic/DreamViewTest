@@ -13,6 +13,7 @@ telephoneInput.addEventListener("input", () => {
 });
 
 formFinishBtn.addEventListener("click", (e) => {
+  e.preventDefault()
   const fullNameValue = document.getElementById("full-name").value;
   const emailValue = document.getElementById("email").value;
   const telephoneValue = document.getElementById("telephone").value;
@@ -25,6 +26,7 @@ formFinishBtn.addEventListener("click", (e) => {
 
   if (fullNameValue === "" || emailValue === "" || telephoneValue === "") {
     formAlert.classList.remove("not-displayed");
+    console.log("entro aca")
   } else {
     ticketInner.innerHTML = `
                       <div class="finished">
