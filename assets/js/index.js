@@ -1,7 +1,12 @@
 const moviesJSON = "https://raw.githubusercontent.com/clissic/movies-json/master/movies.json";
 const carouselInner = document.getElementsByClassName("carousel-inner");
+const billboardInner = document.getElementsByClassName("billboard-movies");
 
-async function fetchmovies(URL) {
+const featuredBtn = document.getElementById("featured-btn");
+const billboardBtn = document.getElementById("billboard-btn");
+const ticketBtn = document.getElementById("ticket-btn");
+
+async function fetchMovies(URL) {
   try {
     const response = await fetch(URL);
 
@@ -13,6 +18,7 @@ async function fetchmovies(URL) {
     const movies = data;
 
     let moviesHTML = "";
+    let billboardHTML = "";
 
     movies.forEach((movie) => {
       if (movie.featured === true) {
@@ -43,7 +49,7 @@ async function fetchmovies(URL) {
                                     <p>Ver trailer</p>
                                 </div>
                                 <div class="carousel-button-div">
-                                    <a href="" class="featured-button"><img src="./assets/img/ticket-svg.svg" alt="ticket button"></a>
+                                    <a href="./pages/tickets.html" class="featured-button"><img src="./assets/img/ticket-svg.svg" alt="ticket button"></a>
                                     <p>Comprar ticket</p>
                                 </div>
                             </div>
@@ -51,9 +57,19 @@ async function fetchmovies(URL) {
                     </div>
                     `;
       }
+
+      billboardHTML += `
+      <div class="movie-card">
+        <p>${movie.name}</p>
+        <h6>${movie.language}</h6>
+        <div class="movie-card-img" style="background-image: url('${movie.banner}');"></div>
+        <a href="./pages/tickets.html">Comprar ticket</a>
+      </div>
+      `;
     });
 
     carouselInner[0].innerHTML = moviesHTML;
+    billboardInner[0].innerHTML = billboardHTML;
 
     const carouselItem = document.getElementsByClassName("carousel-item");
     carouselItem[0].classList.add("active");
@@ -62,6 +78,20 @@ async function fetchmovies(URL) {
   }
 }
 
+featuredBtn.addEventListener("click", () => {
+  if (!featuredBtn.classList.contains("active")) {
+    featuredBtn.classList.add("active");
+    billboardBtn.classList.remove("active");
+  }
+})
+
+billboardBtn.addEventListener("click", () => {
+  if (!billboardBtn.classList.contains("active")) {
+    billboardBtn.classList.add("active");
+    featuredBtn.classList.remove("active");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
-  await fetchmovies(moviesJSON);
+  await fetchMovies(moviesJSON);
 });
