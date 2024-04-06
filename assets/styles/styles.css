@@ -279,6 +279,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;
+    min-height: 100vh;
 }
 
 .tickets {
